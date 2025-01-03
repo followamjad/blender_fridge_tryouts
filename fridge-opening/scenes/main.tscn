@@ -1,3 +1,9 @@
-[gd_scene format=3 uid="uid://bkjpng6ttn3fs"]
+[gd_scene load_steps=2 format=3 uid="uid://bkjpng6ttn3fs"]
+
+[ext_resource type="PackedScene" uid="uid://sq27vvdasxyo" path="res://art/fridge.blend" id="1_gkdis"]
 
 [node name="main" type="Node3D"]
+
+[node name="fridge" parent="." instance=ExtResource("1_gkdis")]
+
+[editable path="fridge"]
