@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cbj0iuyin63cr"]
+
+[ext_resource type="Script" path="res://tryouts/tryout.gd" id="1_fidri"]
+
+[node name="tryout" type="Node2D"]
+script = ExtResource("1_fidri")

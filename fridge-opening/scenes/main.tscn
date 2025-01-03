@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bkjpng6ttn3fs"]
 
-[ext_resource type="Script" path="res://scenes/main.gd" id="1_4n3xy"]
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_4n3xy"]
 [ext_resource type="PackedScene" uid="uid://sq27vvdasxyo" path="res://art/fridge.blend" id="1_gkdis"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3optx"]
@@ -20,9 +20,32 @@ script = ExtResource("1_4n3xy")
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_wo6l3")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.121869, -0.528904, 0.839886, 0, 0.846193, 0.532876, -0.992546, -0.0649413, 0.103125, 4.1, 2.669, 0.478)
+[node name="camera" type="Camera3D" parent="."]
+transform = Transform3D(0.121869, -0.528904, 0.839886, 0, 0.846193, 0.532876, -0.992546, -0.0649411, 0.103125, 4.18969, 2.669, -0.0959949)
 fov = 65.1
+
+[node name="ui" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="ui"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="status_label" type="Label" parent="ui/Control"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = -68.0
+offset_right = 390.0
+offset_bottom = -24.0
+grow_vertical = 0
+text = "ccc"
+vertical_alignment = 1
 
 [connection signal="animation_finished" from="fridge/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 
